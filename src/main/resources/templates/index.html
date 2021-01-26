@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!--suppress ALL-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>视频网站</title>
+</head>
+<body>
+<h1 > 视频列表</h1>
+</h1>
+<table>
+    <ul th:each="file:${files}"><a th:text="${file.getName()}" th:href="@{/video(file=${file})}"></a></ul>
+</table>
+
+</body>
+</html>
